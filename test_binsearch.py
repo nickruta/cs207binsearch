@@ -9,6 +9,11 @@ def test_empty_array():
 def test_array_with_one_element():
 	assert binary_search([2], 2) == 0
 
+def test_array_with_two_elements():
+	assert binary_search([2,3], 2) == 0
+
+
+
 
 
 
