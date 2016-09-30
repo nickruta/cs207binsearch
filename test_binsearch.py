@@ -3,7 +3,7 @@ from pytest import raises, fixture
 import numpy as np
 
 # In the binsearch.py file, I only left doc tests that demonstrate to the user what the 
-# functionality is and how to use it. I left searching for input, and searching for input in a range
+# functionality is and how to use it. I left searching for input and searching for input in a range
 # of the array. I demonstrated what the return value is when the item is found and not found in each
 # instance.
 
@@ -27,7 +27,7 @@ def input_array_with_nan():
 #We should test with wierd data, ie a wierd array: does it have NANs, is it numeric? 
 #Does it have 0 elelemts? 1 element? 2?...ie test the boundaries
 
-# first test to verify that an empty array returns -1
+# First test to verify that an empty array returns -1
 # if rangemax > rangemin, binary_search should return -1
 def test_array_found(input_array):
 	assert binary_search(input_array, 2) == 2
@@ -51,7 +51,7 @@ def test_array_with_two_elements_found():
 def test_array_with_two_elements_not_found():
 	assert binary_search([2,3], 5) == -1
 
-# data types that are comparable will work, use a char array to verify this
+# Data types that are comparable will work, use a char array to verify this.
 def test_char_array():
 	assert binary_search(['a','b','c', 'd', 'e', 'f', 'g'], 'f') == 5
 
